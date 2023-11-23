@@ -1,10 +1,32 @@
+:root {
+  --nav-grey-50: #656266;
+  --nav-grey-100: #616161;
+  --nav-grey-200: #322F33;
+  --nav-grey-300: #1C181D;
+  --font-light: #E3E3E3;
+  --font-mid: #616161;
+  --font-dark: #303030;
+  --stroke-s50: #EBEBEB;
+  --stroke-s100: #00000012;
+  --stroke-s200: #FFFFFF33;
+  --hover: #F7F7F7;
+  --pressed: #F0F0F0;
+  --focused: #005BD3;
+  --bg: #F1F1F1;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter';
+  box-sizing: border-box;
+  background-color: var(--bg);
+}
+
 /* nav */
 .menus {
   display: flex;
   align-items: center;
   gap: 8px;
-  
-
 }
 
 .bell-menu {
@@ -40,25 +62,18 @@ label p {
   font-weight: 500;
   left: 30px;
   top: 50%;
-  transform: translatey(-50%);
+  transform: translateY(-50%);
 }
 
 label svg {
   position: absolute;
   left: 8px;
   top: 50%;
-  transform: translatey(-50%);
-}
-
-
-body {
-  margin: 0;
-  font-family: 'Inter';
-  box-sizing: border-box;
+  transform: translateY(-50%);
 }
 
 .navbar {
-  background-color: #000000;
+  background-color: #1A1A1A;
   padding: 12px 16px;
   display: flex;
   align-items: center;
@@ -80,5 +95,41 @@ body {
 
 .menus a {
   text-decoration: none;
+}
 
+.profile {
+  position: relative;
+}
+.profile-dropdown {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: rgb(64, 17, 17);
+  width: min-content;
+  min-width: 300px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 3px solid var(--nav-grey-50);
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.profile-dropdown * {
+  color: #303030;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.alerts-con {
+  display: flex;
+  background-color: white;
+  border: 1px solid var(--stroke-s200);
 }
